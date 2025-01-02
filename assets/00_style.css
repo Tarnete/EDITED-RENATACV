@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* Reset de estilos básicos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+/* Variáveis de estilo */
+:root {
+    --cor-de-fundo: radial-gradient(610px at 5.2% 51.6%, rgb(5, 8, 114) 0%, rgb(7, 3, 53) 97.5%);
+    --cor-do-hover: #8621f8;
+    --cor-fonte-primaria: white;
+    --cor-fonte-secundaria: blue;
+    --tamanho-fonte-primaria: 16px;
+    --tamanho-fonte-secundaria: 18px;
+    --tamanho-fonte-terceira: 20px;
+    --fonte-principal: "Outifit"
+}
+
+/* Estilos do corpo */
+body {
+    min-height: 100vh;
+    background: var(--cor-de-fundo);
+    /* background-image:url("assets/imagens/cool-background.svg"); */
+    font-size: var(--tamanho-fonte-primaria);
+    color: var(--cor-fonte-primaria);
+    font-size: var(--fonte-principal);
+}
+
+/* Estilos do cabeçalho */
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos da barra lateral */
+.side-bar {
+    background: var(--cor-de-fundo);
+    /* backdrop-filter: blur(30px); */
+    width: 310px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* overflow-y: auto; */
+    transition: left 0.6s ease;
+    /* border: 2px solid #ccc; */
+    font-size: var(--tamanho-fonte-primaria);
+}
+
+.side-bar.active {
+    left: 0;
+}
+
+
+
+
+
+/* Menu da barra lateral */
+.side-bar .menu {
+    width: 100%;
+    margin-top: 2.5em;
+}
+
+.side-bar .menu .item {
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.side-bar .menu .item a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+}
+
+.side-bar .menu .item a:hover {
+    background: var(--cor-fonte-primaria);
+    color: var(--cor-fonte-secundaria);
+    border-radius: 10px;
+    
+}
+
+.side-bar .menu .item i {
+    margin-right: 15px;
+}
+
+.side-bar .menu .item .sub-menu {
+    background: rgba(255, 255, 255, 0.1);
+    display: none;
+    margin-left: 2em;
+    border-radius: 1em;
+    
+}
+
+.side-bar .menu .item .sub-menu a {
+    padding-left: 5px;
+}
+
+/* Botões de controle */
+.close-btn,
+.menu-btn {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    margin: 25px;
+    cursor: pointer;
+}
+
+/* Apresentação */
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-align: justify;
+    margin-top: 0em;
+    margin-left: 250px;
+    padding: 2em;
+
+}
+
+.foto {
+    border: 2px solid #ccc;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    /* margin-right: 2em; */
+    
+    width: 20em;
+}
+
+
+
+.formatacao {
+    margin: 3em;
+    font-size: var(--tamanho-fonte-primaria);
+}
+
+
+.formatacao .sessao {
+    margin: 2em 1em;
+    /* Distância de 2em entre cada sessão */
+}
+
+.formatacao h1 {
+    margin: 0em 0em;
+    font-size: var(--tamanho-fonte-terceira);
+    text-align: center;
+    /* Distância de 1em entre subtítulos e o conteúdo abaixo */
+}
+
+.formatacao h2 {
+    margin-bottom: 1em;
+    /* Distância de 1em entre subtítulos e o conteúdo abaixo */
+}
+
+.formatacao ul {
+    margin-top: 0;
+    padding-left: 1.5em;
+    /* Recuo para listas */
+
+}
+
+.formatacao li {
+    margin-bottom: 1em;
+    /* Espaçamento entre itens da lista */
+}
+
+.voltar {
+    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    
+    
+}
+
+.botao_voltar {
+    
+    display: inline-block;
+    padding: 0.5em 1em;
+    /* background-color: #007BFF; */
+    color: white;
+    text-decoration: none;
+    border-radius: 2em;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+
+.formatacao .sessao h2 {
+    margin-bottom: 0.4em;
+    /* Adiciona espaço abaixo do h2 */
+}
+
+.formatacao .sessao p {
+    margin: 0 0 1em;
+    /* Remove margens superiores padrão do p */
+}
+
+.formatacao .sessao ul {
+    margin-bottom: 2em;
+}
+
+/* .botao_voltar:hover {
+    background-color: #0056b3;
+} */
+
+
+#portifolio {
+
+    margin-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    column-gap: 3em;
+
+}
+
+
+.card__portifolio {
+    margin-bottom: 2em;
+}
+
+
+.imagem__portifolio {
+    border: 3px solid #ccc;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    margin-right: 1px;
+    width: 25em;
+    height: 20em;
+    
+
+
+
+}
+
+
+
+
+.video__portifolio {
+    border-radius: 30px;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os cantos arredondados */
+    margin: 0.5em 0 2em 0;
+    font-size: var(--cor-fonte-secundaria);
+    
+}
+
+    
+    
+    
+    
+    
+
+.card__portifolio h2 {
+    margin: 0.5em 0 0 0;
+    
+    font-size: var(--cor-fonte-secundaria);
+    /* text-decoration: underline; */
+}
+
+.video__portifolio h2 {
+    margin: 0.5em 0 0 0;
+    font-size: var(--cor-fonte-secundaria);
+    /* text-decoration: underline; */
+}
+    
+
+.sublinhado {
+
+    text-decoration: underline;
+
+}
+
+.barra{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    margin-left: 10px;
+}
+
+.rotate{
+    transform: rotate(90deg);
+  }
+
+  .logo{
+    
+    
+    font-size: 40px;
+    
+    
+  }
+
+  .logo__inicial
+  {
+    
+    margin: 1em 0 1em 1em;
+    font-size: 30px;
+    
+  }
+
+  .container_logo {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 1em;
+    
+    
+}
+
+    
+
+
+
+    
+    
+    
+
+
+
+
+    
+    
+    
+
+
+
+
+
+  
+
+
+               
